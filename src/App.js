@@ -18,8 +18,9 @@ function App() {
   const addRandom = () => {
     const randomIndex = Math.floor(Math.random() * remainingContacts.length)
     const randomContact = remainingContacts[randomIndex]
-    const contactsWithoutDuplicates = remainingContacts.splice(randomIndex + 1)
-    console.log(contactsWithoutDuplicates)
+    console.log(remainingContacts)
+    const contactsWithoutDuplicates = remainingContacts.splice(randomIndex, 1)
+    console.log(remainingContacts)
     setContact([...contacts, randomContact])
   }
 
